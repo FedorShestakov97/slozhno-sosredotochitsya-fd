@@ -8,7 +8,7 @@
   background-attachment: fixed;
   line-height: 23.4px;
   margin: 0 auto;
-  padding: 10px;
+  padding: 0px 10px;
 }
 
 .section-title {
@@ -30,15 +30,20 @@
 }
 
 .header {
-  position: relative;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  min-block-size: calc(100vh - 20px);
+  min-block-size: 100vh;
+}
+
+.decorated-zone {
+  position: relative;
+  padding: 10px 0;
 }
 
 .span-header {
   position: absolute;
+  margin-top: 10px;
   margin-right: 9px;
   display: flex;
   gap: 10px;
@@ -94,7 +99,7 @@
 
 .frame::before {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
   content: "";
   border-top: 1px solid var(--section-title);
@@ -105,7 +110,7 @@
 
 .frame::after {
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
   left: 0;
   content: "";
   border-bottom: 1px solid var(--section-title);
@@ -115,7 +120,7 @@
 }
 
 .main-content {
-  padding-block: 50px;
+  padding-block: 40px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -159,7 +164,7 @@
 .footer {
   position: relative;
   padding: 10px;
-  min-block-size: calc(100vh - 20px);
+  min-block-size: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -210,13 +215,29 @@
 
 @media (min-width: 768px) {
   .page {
-    padding: 20px;
+    padding: 0 20px;
   }
 
   .header {
-    min-block-size: calc(100vh - 40px);
+    min-block-size: 100vh;
   }
 
+  .decorated-zone {
+    position: relative;
+    padding: 20px 0;
+  }
+
+  .span-header {
+    margin-top: 20px;
+  }
+
+  .frame::after {
+    bottom: 20px;
+  }
+
+  .frame::before {
+    top: 20px;
+  }
   .header-title {
     margin-left: -20px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -234,10 +255,11 @@
 
   .section-answer {
     grid-column: 2/4;
+    padding-inline-start: 6px;
   }
 
   .main-content {
-    padding-block: 80px;
+    padding-block: 60px;
     gap: 80px;
   }
 
@@ -248,10 +270,6 @@
 
   .content-concentration {
     grid-column: 1/4;
-  }
-
-  .section-answer {
-    padding-inline-start: 6px;
   }
 
   .gallery-content {
@@ -294,7 +312,7 @@
   }
 
   .footer {
-    min-block-size: calc(100vh - 40px);
+    min-block-size: 100vh;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
