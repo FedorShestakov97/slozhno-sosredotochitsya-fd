@@ -10,4 +10,5 @@
   --font-size: 18px;
   --bg-img: url(../images/cover-image-dark.png);
   --shadow-color: #FF0070;
+  --button-hover: rgba(255, 0, 112, 0.40);
 }

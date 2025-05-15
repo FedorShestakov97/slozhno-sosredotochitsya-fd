@@ -4,11 +4,10 @@
   --section-title: #FF0070;
   --text-color: #F1B2CE;
   --background-title: #FF0070;
-  --main-font: 'IBM Plex mono';
   --title-header: #DB00FF;
-  --font-size: 18px;
   --bg-img: url(../images/cover-image-dark.png);
   --shadow-color: #FF0070;
+  --button-hover: rgba(255, 0, 112, 0.40);
 }
 
 .theme-dark .span-header {
@@ -16,5 +15,5 @@
 }
 
 .theme-dark .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 0.40);
+  border: 1px solid var(--button-hover);
 }
