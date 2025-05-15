@@ -29,6 +29,7 @@
   --title-header: #FFC2E6;
   --bg-img: url(../images/cover-image-light.png);
   --shadow-color: #FF8DCB;
+  --button-hover: rgba(50, 49, 45, 0.40);
 }
 
 .span-header {
